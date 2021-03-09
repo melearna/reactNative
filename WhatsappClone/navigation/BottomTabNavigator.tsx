@@ -1,5 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
+<<<<<<< HEAD:WhatsappClone/navigation/MainTabNavigator.tsx
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+=======
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+>>>>>>> parent of 2b80ce0 (Tabs Created):WhatsappClone/navigation/BottomTabNavigator.tsx
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
@@ -9,9 +13,13 @@ import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
+<<<<<<< HEAD:WhatsappClone/navigation/MainTabNavigator.tsx
 const MainTab = createMaterialTopTabNavigator<BottomTabParamList>();
+=======
+const BottomTab = createBottomTabNavigator<BottomTabParamList>();
+>>>>>>> parent of 2b80ce0 (Tabs Created):WhatsappClone/navigation/BottomTabNavigator.tsx
 
-export default function MainTabNavigator() {
+export default function BottomTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (

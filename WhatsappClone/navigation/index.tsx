@@ -1,14 +1,12 @@
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
-import {ColorSchemeName, View} from 'react-native';
-import {Octicons, MaterialCommunityIcons} from '@expo/vector-icons';
+import { ColorSchemeName } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import MainTabNavigator from './MainTabNavigator';
+import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
-import Colors from "../constants/Colors";
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -28,6 +26,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
+<<<<<<< HEAD
     <Stack.Navigator screenOptions={{
         headerStyle: {
           backgroundColor: Colors.light.tint,
@@ -59,6 +58,10 @@ function RootNavigator() {
               )
           }}
       />
+=======
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Root" component={BottomTabNavigator} />
+>>>>>>> parent of 2b80ce0 (Tabs Created)
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
