@@ -6,7 +6,7 @@ import { Octicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './BottomTabNavigator';
+import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 import Colors from "../constants/Colors";
 
@@ -40,7 +40,7 @@ function RootNavigator() {
     }}>
       <Stack.Screen
           name="Root"
-          component={BottomTabNavigator}
+          component={MainTabNavigator}
           options={{
               title: "Whatsapp",
               headerRight: () => (
